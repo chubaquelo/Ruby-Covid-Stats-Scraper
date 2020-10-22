@@ -1,4 +1,4 @@
-# rubocop:disable Layout/SpaceAfterComma, Style/FrozenStringLiteralComment
+# rubocop:disable Layout/SpaceAfterComma, Style/FrozenStringLiteralComment,  Metrics/MethodLength
 
 require_relative 'parse_methods'
 
@@ -14,10 +14,10 @@ end
 
 def country_stats(country)
   if country.is_a?(Integer)
-    country = country_name(country) 
+    country = country_name(country)
     return false if country == 'Incorrect country number. Should be 1 to 6'
   elsif country.is_a?(String)
-    country.gsub!(' ', '-') 
+    country.gsub!(' ', '-')
     return false unless url_exists?("https://www.worldometers.info/coronavirus/country/#{country}")
   end
   f = parse_country_page(country)
@@ -34,4 +34,4 @@ def country_name(country_number)
   countries.key?(country_number) ? countries[country_number] : 'Incorrect country number. Should be 1 to 6'
 end
 
-# rubocop:enable Layout/SpaceAfterComma, Style/FrozenStringLiteralComment
+# rubocop:enable Layout/SpaceAfterComma, Style/FrozenStringLiteralComment,  Metrics/MethodLength
