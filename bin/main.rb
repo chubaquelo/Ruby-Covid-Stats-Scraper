@@ -30,7 +30,6 @@ while run
   end
 
   if world_or_country == 1
-    # First I need to grab the data with a method here and set it into a variable.
     s = world_stats
     puts ''
     puts 'World COVID Statistics'
