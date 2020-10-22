@@ -1,11 +1,9 @@
-# rubocop:disable Style/FrozenStringLiteralComment
-
 require 'nokogiri'
 require_relative './lib/country'
 require_relative './lib/world'
 
 describe '#world_stats' do
-  
+
   let(:wstats) { world_stats }
   it 'return an array' do
     expect(wstats.class).to be(Array)
@@ -125,5 +123,3 @@ describe '#parse_country_page' do
     expect(parse_country_page('argentina')).not_to be_nil
   end
 end
-
-# rubocop:enable Style/FrozenStringLiteralComment

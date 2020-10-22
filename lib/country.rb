@@ -7,7 +7,7 @@ require 'net/http'
 class Country
   attr_reader :name
   def initialize(name)
-    name.is_a?(Integer) ? @name = country_name(name) : @name = name
+    @name = name.is_a?(Integer) ? country_name(name) : name
   end
 
   def cases
