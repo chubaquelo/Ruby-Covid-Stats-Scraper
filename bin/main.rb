@@ -1,7 +1,7 @@
 # rubocop:disable Style/FrozenStringLiteralComment, Metrics/BlockNesting
 
-require '../lib/stats'
-require '../lib/parse_methods'
+require_relative '../lib/stats'
+require_relative '../lib/parse_methods'
 require 'colorize'
 
 world_or_country = ''
