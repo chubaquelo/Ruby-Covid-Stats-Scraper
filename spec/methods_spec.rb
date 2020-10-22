@@ -93,6 +93,28 @@ describe '#country_stats' do
     it 'returns congo when pass a 4'
       expect(country_name(4)).to eql 'congo'
     end
+
+    describe '#url_exists?' do
+      it 'return true when pass argentina' do
+        expect(url_exists?('argentina')).to eql true
+      end
+
+      it 'return false when pass nonexist country' do
+        expect(url_exists?('nonexist')).to eql false
+      end
+
+      it 'return true when pass el-salvador country' do
+        expect(url_exists?('el-salvador')).to eql true
+      end
+
+      it 'return false when pass el salvador country' do
+        expect(url_exists?('el salvador')).to eql false
+      end
+
+      it 'return false when pass a number' do
+        expect(url_exists?('2')).to eql false
+      end
+    end
 end
 
 # rubocop:enable Style/FrozenStringLiteralComment
