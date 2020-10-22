@@ -1,8 +1,8 @@
 # rubocop:disable Style/FrozenStringLiteralComment
 
 require 'nokogiri'
-require_relative './lib/stats'
-require_relative './lib/parse_methods'
+require './lib/stats'
+require './lib/parse_methods'
 
 describe '#world_stats' do
   let(:wstats) { world_stats }
