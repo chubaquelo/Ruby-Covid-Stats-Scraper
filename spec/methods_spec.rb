@@ -1,6 +1,6 @@
 require 'nokogiri'
-require_relative './lib/country'
-require_relative './lib/world'
+require_relative '../lib/country'
+require_relative '../lib/world'
 
 context Country do
   country = Country.new('argentina')
