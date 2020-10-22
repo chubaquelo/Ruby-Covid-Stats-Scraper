@@ -114,14 +114,14 @@ describe '#url_exists?' do
 end
 
 describe '#parse_world_page' do
-  it 'returns not empty string' do
-    expect(parse_world_page).not_to be_empty
+  it 'returns not nil' do
+    expect(parse_world_page).not_to be_nil
   end
 end
 
 describe '#parse_country_page' do
-  it 'returns not empty string' do
-    expect(parse_country_page('argentina')).not_to be_empty
+  it 'returns not nil' do
+    expect(parse_country_page('argentina')).not_to be_nil
   end
 end
 
