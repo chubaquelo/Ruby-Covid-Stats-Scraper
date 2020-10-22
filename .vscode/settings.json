@@ -1,0 +1,6 @@
+{
+    "ruby.rubocop.onSave": false,
+    "ruby.codeCompletion": "rcodetools",
+    "ruby.format": "rubocop",
+    "ruby.useLanguageServer": true
+}
