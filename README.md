@@ -24,16 +24,19 @@ $  cd <folder>
 ```
 $  git clone https://github.com/chubaquelo/Ruby-Covid-Stats-Scraper
 ```
-Go to the repo folder in your computer and run it as follows:
+Go to the repo folder in your computer, then to bin folder, and run it, as follows:
 ```
 $  cd Ruby-Covid-Stats-Scraper
 ```
 ```
-$  ruby ./bin/main.rb
+$  cd bin
+```
+```
+$  ruby main.rb
 ```
 
 ## Live Demo
-[Live Demo Link](https://chubaquelo.github.io/Ruby-Covid-Stats-Scraper/ "Live Demo")
+[Live Demo Link](https://repl.it/@chubaquelo/Ruby-Covid-Stats-Scraper/ "Live Demo")
 
 ## Authors
 
