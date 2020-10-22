@@ -77,6 +77,22 @@ describe '#country_stats' do
     expect(country_stats(7)).to eql false
   end
 
+  describe '#country_name' do
+    it 'returns error message when pass 8'
+      expect(country_name(8)).to eql 'Incorrect country number. Should be 1 to 6'
+    end
+
+    it 'returns error message when pass a string'
+      expect(country_name('string')).to eql 'Incorrect country number. Should be 1 to 6'
+    end
+    
+    it 'returns argentina when pass a 1'
+      expect(country_name(1)).to eql 'argentina'
+    end
+    
+    it 'returns congo when pass a 4'
+      expect(country_name(4)).to eql 'congo'
+    end
 end
 
 # rubocop:enable Style/FrozenStringLiteralComment
