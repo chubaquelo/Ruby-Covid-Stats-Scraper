@@ -1,4 +1,4 @@
-# rubocop:disable Style/FrozenStringLiteralComment, Metrics/BlockNesting
+# rubocop:disable Metrics/BlockNesting
 
 # require_relative '../lib/stats'
 # require_relative '../lib/parse_methods'
@@ -8,7 +8,6 @@ require 'colorize'
 
 world_or_country = ''
 chosen_country = ''
-country_stats = ''
 run = true
 
 puts '--------------------------------------------'.colorize(:yellow)
@@ -33,9 +32,9 @@ while run
 
   if world_or_country == 1
     world = World.new
-    cases = world.get_cases
-    deaths = world.get_deaths
-    recov = world.get_recovered
+    cases = world.cases
+    deaths = world.deaths
+    recov = world.recovered
     puts ''
     puts 'World COVID Statistics'
     puts 'Until today, registered world data is:'
@@ -75,10 +74,10 @@ while run
       puts 'Until today, registered data is:'
       puts ''
       puts "----------#{country.name.upcase.sub('-', ' ')} STATS-------------"
-      puts " Cases: #{country.get_cases}".center(30).colorize(:blue)
-      puts " Deaths: #{country.get_deaths}".center(30).colorize(:red)
-      puts " Recovered: #{country.get_recovered}".center(30).colorize(:green)
-      puts " Death Rate: #{(country.get_deaths.to_f / country.get_cases * 100).round(2)}%".center(30).colorize(:magenta)
+      puts " Cases: #{country.cases}".center(30).colorize(:blue)
+      puts " Deaths: #{country.deaths}".center(30).colorize(:red)
+      puts " Recovered: #{country.recovered}".center(30).colorize(:green)
+      puts " Death Rate: #{(country.deaths.to_f / country.cases * 100).round(2)}%".center(30).colorize(:magenta)
       puts '----------------------------------'
       puts "*Data by worldometers.info | #{Time.now}"
       puts ''
@@ -96,10 +95,10 @@ while run
       puts 'Until today, registered data is:'
       puts ''
       puts "----------#{country.name.upcase.sub('-', ' ')} STATS-------------"
-      puts " Cases: #{country.get_cases}".center(30).colorize(:blue)
-      puts " Deaths: #{country.get_deaths}".center(30).colorize(:red)
-      puts " Recovered: #{country.get_recovered.zero? ? 'No Data' : country.get_recovered}".center(30).colorize(:green)
-      puts " Death Rate: #{(country.get_deaths.to_f / country.get_cases * 100).round(2)}%".center(30).colorize(:magenta)
+      puts " Cases: #{country.cases}".center(30).colorize(:blue)
+      puts " Deaths: #{country.deaths}".center(30).colorize(:red)
+      puts " Recovered: #{country.recovered.zero? ? 'No Data' : country.recovered}".center(30).colorize(:green)
+      puts " Death Rate: #{(country.deaths.to_f / country.cases * 100).round(2)}%".center(30).colorize(:magenta)
       puts '----------------------------------'
       puts "*Data by worldometers.info | #{Time.now}"
       puts ''
@@ -116,4 +115,4 @@ while run
   puts '----------------------------------'
 end
 
-# rubocop:enable Style/FrozenStringLiteralComment, Metrics/BlockNesting
+# rubocop:enable Metrics/BlockNesting

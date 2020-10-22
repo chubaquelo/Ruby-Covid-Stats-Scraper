@@ -1,10 +1,11 @@
 # rubocop:disable Style/FrozenStringLiteralComment
 
 require 'nokogiri'
-require_relative './lib/stats'
-require_relative './lib/parse_methods'
+require_relative './lib/country'
+require_relative './lib/world'
 
 describe '#world_stats' do
+  
   let(:wstats) { world_stats }
   it 'return an array' do
     expect(wstats.class).to be(Array)

@@ -1,30 +1,29 @@
+# rubocop:disable Layout/SpaceAfterComma
+
 require 'nokogiri'
 require 'open-uri'
 require 'net/http'
 
 class Country
-  attr_reader :name  
+  attr_reader :name
   def initialize(name)
-    if name.is_a?(Integer)
-      @name = country_name(name)
-    else
-      @name = name
-    end
+    name.is_a?(Integer) ? @name = country_name(name) : @name = name
   end
 
-  def get_cases
+  def cases
     country_stats[0]
   end
 
-  def get_deaths
+  def deaths
     country_stats[1]
-  end  
+  end
 
-  def get_recovered
+  def recovered
     country_stats[2]
   end
 
   private
+
   def parse_country_page(country)
     Nokogiri::HTML(URI.open("https://www.worldometers.info/coronavirus/country/#{country}"))
   end
@@ -44,7 +43,7 @@ class Country
       arr.push(/(\d{1,3},?\d{1,3},?\d{1,3}|\d{2})/.match(div.to_s).to_s.gsub(',','').to_i)
     end
     arr
-  end  
+  end
 
   def country_name(country_number)
     countries = { 1 => 'argentina', 2 => 'serbia', 3 => 'iraq', 4 => 'congo', 5 => 'nigeria', 6 => 'us' }
@@ -61,3 +60,5 @@ def url_exists?(country)
   end
   true
 end
+
+# rubocop:enable Layout/SpaceAfterComma

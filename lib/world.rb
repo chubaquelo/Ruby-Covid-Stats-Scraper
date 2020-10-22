@@ -1,25 +1,33 @@
+# rubocop:disable Layout/SpaceAfterComma
+
 require 'nokogiri'
 require 'open-uri'
 require 'net/http'
 
 class World
-  attr_reader :name  
+  attr_reader :name
   def initialize
     @name = 'world'
-  end  
-  def get_cases
+  end
+
+  def cases
     world_stats[0]
-  end  
-  def get_deaths
+  end
+
+  def deaths
     world_stats[1]
-  end  
-  def get_recovered
+  end
+
+  def recovered
     world_stats[2]
-  end  
+  end
+
   private
+
   def parse_world_page
     Nokogiri::HTML(URI.open('https://www.worldometers.info/coronavirus/'))
-  end  
+  end
+
   def world_stats
     f = parse_world_page
     g = f.css('div[class="maincounter-number"]')
@@ -30,3 +38,5 @@ class World
     arr
   end
 end
+
+# rubocop:enable Layout/SpaceAfterComma
