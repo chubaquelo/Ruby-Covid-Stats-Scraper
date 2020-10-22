@@ -81,7 +81,7 @@ describe '#country_name' do
   it 'returns error message when pass a string' do
     expect(country_name('string')).to eql 'Incorrect country number. Should be 1 to 6'
   end
-  
+
   it 'returns argentina when pass a 1' do
     expect(country_name(1)).to eql 'argentina'
   end
@@ -114,14 +114,14 @@ describe '#url_exists?' do
 end
 
 describe '#parse_world_page' do
-  it 'returns not empty string'
-    expect(parse_world_page).to not_eql([])
+  it 'returns not empty string' do
+    expect(parse_world_page).not_to be_empty
   end
 end
 
 describe '#parse_country_page' do
-  it 'returns not empty string'
-    expect(parse_country_page('argentina')).to not_eql([])
+  it 'returns not empty string' do
+    expect(parse_country_page('argentina')).not_to be_empty
   end
 end
 
