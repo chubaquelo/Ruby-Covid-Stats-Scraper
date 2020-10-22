@@ -13,6 +13,24 @@ RUBY
 
 [RUBY, Nokogiri, open-uri, net/http] Libraries
 
+## Instructions
+
+To run this program, you need to have Ruby in your computer.
+Clone this repository in your computer
+```
+$  cd <folder>
+```
+```
+$  git clone https://github.com/chubaquelo/Ruby-Covid-Stats-Scraper
+```
+Go to the repo folder in your computer and run it as follows:
+```
+$  cd Ruby-Covid-Stats-Scraper
+```
+```
+$  ruby ./bin/main.rb
+```
+
 ## Live Demo
 [Live Demo Link](https://chubaquelo.github.io/Ruby-Covid-Stats-Scraper/ "Live Demo")
 
