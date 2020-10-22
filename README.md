@@ -11,12 +11,12 @@ You can choose or type a country to get it's infections, deaths and recoveres st
 ## Built With
 RUBY
 
-[RUBY, Nokogiri, open-uri, net/http] Libraries
+[RUBY, Nokogiri, colorize, open-uri, net/http] Libraries
 
 ## Instructions
 
-To run this program, you need to have Ruby in your computer.
-You need ruby gems: colorize, nokogiri
+To run this program, you need to have Ruby in your computer.<br>
+You need ruby gems: colorize, nokogiri<br>
 Clone this repository in your computer
 ```
 $  cd <folder>
