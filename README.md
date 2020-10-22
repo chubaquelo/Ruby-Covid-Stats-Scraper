@@ -6,7 +6,7 @@ I have developed an scraper that takes real time data from worldometers.info
 
 You can choose or type a country to get it's infections, deaths and recoveres stats, or you can choose to get the world stats.
 
-![alt text](https://i.imgur.com/OEFByNJ.jpg "Preview Img")
+![alt text](https://i.imgur.com/AnB5wxY.jpeg "Preview Img")
 
 ## Built With
 RUBY
