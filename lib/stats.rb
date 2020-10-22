@@ -15,8 +15,13 @@ def world_stats
 end
 
 def country_stats(country)
-  country = country_name(country) if country.is_a?(Integer)
-  country.gsub!(' ', '-') if country.is_a?(String)
+  if country.is_a?(Integer)
+    country = country_name(country) 
+    return false if country == 'Incorrect country number. Should be 1 to 6'
+  elsif country.is_a?(String)
+    country.gsub!(' ', '-') 
+    return false unless url_exists?("https://www.worldometers.info/coronavirus/country/#{country}")
+  end
   f = parse_country_page(country)
   g = f.css('div[class="maincounter-number"]')
   # Extract number from DIV using Regexp

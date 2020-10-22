@@ -41,7 +41,6 @@ describe '#world_stats' do
 end
 
 describe '#country_stats' do
-  # let(:country_i) { country_stats }
   it 'return an array when pass a number 1' do
     expect(country_stats(1).class).to be(Array)
   end
@@ -52,6 +51,30 @@ describe '#country_stats' do
 
   it 'return an array when pass a string "argentina"' do
     expect(country_stats('argentina').class).to be(Array)
+  end
+
+  it 'array[0] is integer when pass a string "argentina"' do
+    expect(country_stats('argentina')[0]).to be(Integer)
+  end
+
+  it 'array[1] is integer when pass a string "argentina"' do
+    expect(country_stats('argentina')[1]).to be(Integer)
+  end
+
+  it 'array[2] is integer when pass a string "argentina"' do
+    expect(country_stats('argentina')[2]).to be(Integer)
+  end
+
+  it 'return an array when pass a string "el salvador"' do
+    expect(country_stats('el salvador').class).to be(Array)
+  end
+
+  it 'return false when pass a "badcountryname" string' do
+    expect(country_stats('badcountryname')).to eql false
+  end
+
+  it 'return false when pass a number not 1 to 6' do
+    expect(country_stats(7)).to eql false
   end
 
 end
