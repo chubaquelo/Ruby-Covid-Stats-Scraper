@@ -37,16 +37,11 @@ describe '#world_stats' do
   it 'array has no strings on pos [2]' do
     expect(wstats[2]).to_not be(String)
   end
-
 end
 
 describe '#country_stats' do
   it 'return an array when pass a number 1' do
     expect(country_stats(1).class).to be(Array)
-  end
-
-  it 'return an array when pass a number 5' do
-    expect(country_stats(5).class).to be(Array)
   end
 
   it 'return an array when pass a string "argentina"' do
@@ -76,45 +71,46 @@ describe '#country_stats' do
   it 'return false when pass a number not 1 to 6' do
     expect(country_stats(7)).to eql false
   end
+end
 
-  describe '#country_name' do
-    it 'returns error message when pass 8'
-      expect(country_name(8)).to eql 'Incorrect country number. Should be 1 to 6'
-    end
+describe '#country_name' do
+  it 'returns error message when pass 8' do
+    expect(country_name(8)).to eql 'Incorrect country number. Should be 1 to 6'
+  end
 
-    it 'returns error message when pass a string'
-      expect(country_name('string')).to eql 'Incorrect country number. Should be 1 to 6'
-    end
-    
-    it 'returns argentina when pass a 1'
-      expect(country_name(1)).to eql 'argentina'
-    end
-    
-    it 'returns congo when pass a 4'
-      expect(country_name(4)).to eql 'congo'
-    end
+  it 'returns error message when pass a string' do
+    expect(country_name('string')).to eql 'Incorrect country number. Should be 1 to 6'
+  end
+  
+  it 'returns argentina when pass a 1' do
+    expect(country_name(1)).to eql 'argentina'
+  end
 
-    describe '#url_exists?' do
-      it 'return true when pass argentina' do
-        expect(url_exists?('argentina')).to eql true
-      end
+  it 'returns congo when pass a 4' do
+    expect(country_name(4)).to eql 'congo'
+  end
+end
 
-      it 'return false when pass nonexist country' do
-        expect(url_exists?('nonexist')).to eql false
-      end
-
-      it 'return true when pass el-salvador country' do
-        expect(url_exists?('el-salvador')).to eql true
-      end
-
-      it 'return false when pass el salvador country' do
-        expect(url_exists?('el salvador')).to eql false
-      end
-
-      it 'return false when pass a number' do
-        expect(url_exists?('2')).to eql false
-      end
-    end
+describe '#url_exists?' do
+  it 'return true when pass argentina' do
+    expect(url_exists?('argentina')).to eql true
+  end
+  
+  it 'return false when pass nonexist country' do
+    expect(url_exists?('nonexist')).to eql false
+  end
+  
+  it 'return true when pass el-salvador country' do
+    expect(url_exists?('el-salvador')).to eql true
+  end
+  
+  it 'return false when pass el salvador country' do
+    expect(url_exists?('el salvador')).to eql false
+  end
+  
+  it 'return false when pass a number' do
+    expect(url_exists?('2')).to eql false
+  end
 end
 
 # rubocop:enable Style/FrozenStringLiteralComment
