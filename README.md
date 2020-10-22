@@ -6,12 +6,31 @@ I have developed an scraper that takes real time data from worldometers.info
 
 You can choose or type a country to get it's infections, deaths and recoveres stats, or you can choose to get the world stats.
 
-![alt text](https://i.imgur.com/OEFByNJ.jpg "Preview Img")
+![alt text](https://i.imgur.com/AnB5wxY.jpeg "Preview Img")
 
 ## Built With
 RUBY
 
-[RUBY, Nokogiri, open-uri, net/http] Libraries
+[RUBY, Nokogiri, colorize, open-uri, net/http] Libraries
+
+## Instructions
+
+To run this program, you need to have Ruby in your computer.<br>
+You need ruby gems: colorize, nokogiri<br>
+Clone this repository in your computer
+```
+$  cd <folder>
+```
+```
+$  git clone https://github.com/chubaquelo/Ruby-Covid-Stats-Scraper
+```
+Go to the repo folder in your computer and run it as follows:
+```
+$  cd Ruby-Covid-Stats-Scraper
+```
+```
+$  ruby ./bin/main.rb
+```
 
 ## Live Demo
 [Live Demo Link](https://chubaquelo.github.io/Ruby-Covid-Stats-Scraper/ "Live Demo")
