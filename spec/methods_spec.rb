@@ -4,7 +4,6 @@ require_relative '../lib/world'
 
 context Country do
   country = Country.new('argentina')
-  contry_2 = Country.new(1)
   describe '#cases' do
     it 'return an integer' do
       expect(country.cases.class).to be(Integer)
@@ -24,9 +23,11 @@ context Country do
   end
 
   describe '#name' do
+    country_2 = Country.new(1)
     it 'returns argentina as country name' do
       expect(country.name).to eql('argentina')
     end
+    
     it 'returns argentina as country name' do
       expect(country_2.name).to eql('argentina')
     end
