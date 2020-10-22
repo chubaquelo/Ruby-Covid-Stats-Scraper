@@ -16,6 +16,7 @@ RUBY
 ## Instructions
 
 To run this program, you need to have Ruby in your computer.
+You need ruby gems: colorize, nokogiri
 Clone this repository in your computer
 ```
 $  cd <folder>
