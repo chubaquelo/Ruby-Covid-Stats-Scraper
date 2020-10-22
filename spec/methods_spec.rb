@@ -4,21 +4,22 @@ require_relative '../lib/world'
 
 context Country do
   country = Country.new('argentina')
+  contry_2 = Country.new(1)
   describe '#cases' do
     it 'return an integer' do
-      expect(country.cases).to be(Integer)
+      expect(country.cases.class).to be(Integer)
     end
   end
 
   describe '#deaths' do
     it 'return an integer' do
-      expect(country.deaths).to be(Integer)
+      expect(country.deaths.class).to be(Integer)
     end
   end
 
   describe '#recovered' do
     it 'return an integer' do
-      expect(country.recovered).to be(Integer)
+      expect(country.recovered.class).to be(Integer)
     end
   end
 
@@ -26,27 +27,35 @@ context Country do
     it 'returns argentina as country name' do
       expect(country.name).to eql('argentina')
     end
+    it 'returns argentina as country name' do
+      expect(country_2.name).to eql('argentina')
+    end
+  end
+end
+
+context World do
+  world = World.new
+  describe '#cases' do
+    it 'return an integer' do
+      expect(world.cases.class).to be(Integer)
+    end
   end
 
-  describe '#country_stats' do
-    it 'return an array when pass a number 1' do
-      expect(country.country_stats.class).to be(Array)
+  describe '#deaths' do
+    it 'return an integer' do
+      expect(world.deaths.class).to be(Integer)
     end
+  end
 
-    it 'return an array when pass a string "argentina"' do
-      expect(country.country_stats.class).to be(Array)
+  describe '#recovered' do
+    it 'return an integer' do
+      expect(world.recovered.class).to be(Integer)
     end
-  
-    it 'array[0] is integer when pass a string "argentina"' do
-      expect(country.country_stats[0].class).to be(Integer)
-    end
-  
-    it 'array[1] is integer when pass a string "argentina"' do
-      expect(country.country_stats[1].class).to be(Integer)
-    end
-  
-    it 'array[2] is integer when pass a string "argentina"' do
-      expect(country.country_stats[2].class).to be(Integer)
+  end
+
+  describe '#name' do
+    it 'returns world as world name' do
+      expect(world.name).to eql('world')
     end
   end
 end
