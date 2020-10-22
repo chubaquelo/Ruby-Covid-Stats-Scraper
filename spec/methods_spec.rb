@@ -1,14 +1,13 @@
 # rubocop:disable Style/FrozenStringLiteralComment
 
-require './lib/stats'
-require './lib/parse_methods'
+require 'nokogiri'
+require '../lib/stats'
+require '../lib/parse_methods'
 
-describe Stats do
-  let(:ws) { world_stats }
-  describe '#world_stats' do
-    it 'return an array with 3 integers' do
-      expect(:ws).to be_an(Array)
-    end
+describe '#world_stats' do
+  let(:wstats) { world_stats }
+  it '#book_data_array is returned containing book data' do
+    expect(wstats).to be(Array)
   end
 end
 
