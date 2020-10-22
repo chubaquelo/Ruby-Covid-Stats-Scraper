@@ -23,13 +23,13 @@ context Country do
   end
 
   describe '#name' do
-    country_2 = Country.new(1)
+    country_n = Country.new(1)
     it 'returns argentina as country name' do
       expect(country.name).to eql('argentina')
     end
-    
+
     it 'returns argentina as country name' do
-      expect(country_2.name).to eql('argentina')
+      expect(country_n.name).to eql('argentina')
     end
   end
 end
