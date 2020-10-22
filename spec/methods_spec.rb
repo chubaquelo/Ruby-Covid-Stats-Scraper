@@ -95,21 +95,33 @@ describe '#url_exists?' do
   it 'return true when pass argentina' do
     expect(url_exists?('argentina')).to eql true
   end
-  
+
   it 'return false when pass nonexist country' do
     expect(url_exists?('nonexist')).to eql false
   end
-  
+
   it 'return true when pass el-salvador country' do
     expect(url_exists?('el-salvador')).to eql true
   end
-  
+
   it 'return false when pass el salvador country' do
     expect(url_exists?('el salvador')).to eql false
   end
-  
+
   it 'return false when pass a number' do
     expect(url_exists?('2')).to eql false
+  end
+end
+
+describe '#parse_world_page' do
+  it 'returns not empty string'
+    expect(parse_world_page).to not_eql([])
+  end
+end
+
+describe '#parse_country_page' do
+  it 'returns not empty string'
+    expect(parse_country_page('argentina')).to not_eql([])
   end
 end
 
