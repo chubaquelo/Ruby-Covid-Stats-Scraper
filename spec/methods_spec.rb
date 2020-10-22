@@ -54,15 +54,15 @@ describe '#country_stats' do
   end
 
   it 'array[0] is integer when pass a string "argentina"' do
-    expect(country_stats('argentina')[0]).to be(Integer)
+    expect(country_stats('argentina')[0].class).to be(Integer)
   end
 
   it 'array[1] is integer when pass a string "argentina"' do
-    expect(country_stats('argentina')[1]).to be(Integer)
+    expect(country_stats('argentina')[1].class).to be(Integer)
   end
 
   it 'array[2] is integer when pass a string "argentina"' do
-    expect(country_stats('argentina')[2]).to be(Integer)
+    expect(country_stats('argentina')[2].class).to be(Integer)
   end
 
   it 'return an array when pass a string "el salvador"' do
